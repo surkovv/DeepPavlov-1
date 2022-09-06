@@ -59,10 +59,15 @@
     "batch_size": 15,
     "validation_patience": 100,
     "metrics": [
-     {
+      {
         "name": "squad_v1_f1",
         "inputs": ["gold_answers", "model_answer"]
+      },
+      {
+        "name": "sacrebleu",
+        "inputs": ["gold_answers", "model_answer"]
       }
+
     ],
     "class_name": "torch_trainer"
   },
